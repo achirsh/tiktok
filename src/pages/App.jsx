@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { RouteRender } from "../config/route"
 
 // 你的 TikTok 客户端 ID 和回调 URL
 const CLIENT_ID = 'YOUR_TIKTOK_CLIENT_ID';
@@ -51,16 +52,18 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      {accessToken ? (
-        <div>
-          <h1>Access Token: {accessToken}</h1>
-          {/* 在这里展示 TikTok 达人的数据 */}
-        </div>
-      ) : (
-        <button onClick={handleLogin}>Login with TikTok</button>
-      )}
-    </div>
+    
+    // <div className="App">
+    //   {accessToken ? (
+    //     <div>
+    //       <h1>Access Token: {accessToken}</h1>
+    //       {/* 在这里展示 TikTok 达人的数据 */}
+    //     </div>
+    //   ) : (
+    //     <button onClick={handleLogin}>Login with TikTok</button>
+    //   )}
+    // </div>
+    RouteRender()
   );
 }
 
